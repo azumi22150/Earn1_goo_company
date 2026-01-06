@@ -1,44 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>EARN 1</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+<!DOCTYPE html>  <html lang="en">  
+  <head>  
+    <meta charset="UTF-8" />  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />  
+    <title>EARN 1</title>  
+    <script src="https://cdn.tailwindcss.com"></script>  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />  
+    <style>  
+      @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');  body {  
+    font-family: 'Nunito', sans-serif;  
+    overscroll-behavior: none;  
+  }  
+    
+  /* Disable selection for game elements */  
+  .no-select {  
+    user-select: none;  
+    -webkit-user-select: none;  
+    -webkit-touch-callout: none;  
+  }  
 
-  <script type="importmap">
-  {
-    "imports": {
-      "react": "https://esm.sh/react@18",
-      "react-dom/client": "https://esm.sh/react-dom@18/client"
-    }
-  }
-  </script>
-</head>
+  /* Custom animations */  
+  @keyframes float {  
+    0%, 100% { transform: translateY(0); }  
+    50% { transform: translateY(-10px); }  
+  }  
+  .animate-float {  
+    animation: float 3s ease-in-out infinite;  
+  }  
+    
+  .fade-in {  
+    animation: fadeIn 0.5s ease-out forwards;  
+  }  
+    
+  @keyframes fadeIn {  
+    from { opacity: 0; }  
+    to { opacity: 1; }  
+  }  
+</style>
 
-<body class="bg-gray-900 text-white h-screen flex items-center justify-center">
-  <div id="root"></div>
-
-  <script type="module">
-    import React from "react";
-    import { createRoot } from "react-dom/client";
-
-    function App() {
-      return React.createElement(
-        "div",
-        { className: "text-center" },
-        React.createElement("h1", { className: "text-4xl font-bold" }, "EARN 1"),
-        React.createElement("p", null, "Now it works on GitHub Pages"),
-        React.createElement(
-          "button",
-          { className: "mt-4 px-6 py-2 bg-blue-600 rounded" },
-          "Get Started"
-        )
-      );
-    }
-
-    createRoot(document.getElementById("root")).render(
-      React.createElement(App)
-    );
-  </script>
-</body>
+  <script type="importmap">  
+{  
+  "imports": {  
+    "react/": "https://esm.sh/react@^19.2.3/",  
+    "react": "https://esm.sh/react@^19.2.3",  
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",  
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0"  
+  }  
+}  
+</script>  </head>  
+  <body class="bg-gray-900 text-white overflow-hidden h-screen w-screen">  
+    <div id="root" class="h-full w-full"></div>  
+  </body>  
 </html>
