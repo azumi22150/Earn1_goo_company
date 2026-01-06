@@ -1,10 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
   <title>EARN 1</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "react": "https://esm.sh/react@18",
+      "react-dom/client": "https://esm.sh/react-dom@18/client"
+    }
+  }
+  </script>
 </head>
-<body style="background:#0f172a;color:white;font-family:sans-serif">
-  <h1>EARN 1 is LIVE</h1>
-  <p>GitHub Pages is working correctly.</p>
+
+<body class="bg-gray-900 text-white h-screen flex items-center justify-center">
+  <div id="root"></div>
+
+  <script type="module">
+    import React from "react";
+    import { createRoot } from "react-dom/client";
+
+    function App() {
+      return React.createElement(
+        "div",
+        { className: "text-center" },
+        React.createElement("h1", { className: "text-4xl font-bold" }, "EARN 1"),
+        React.createElement("p", null, "Now it works on GitHub Pages"),
+        React.createElement(
+          "button",
+          { className: "mt-4 px-6 py-2 bg-blue-600 rounded" },
+          "Get Started"
+        )
+      );
+    }
+
+    createRoot(document.getElementById("root")).render(
+      React.createElement(App)
+    );
+  </script>
 </body>
 </html>
