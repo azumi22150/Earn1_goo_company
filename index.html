@@ -8,7 +8,7 @@
     />
     <title>EARN 1</title>
 
-    <!-- Tailwind -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Font Awesome -->
@@ -20,20 +20,12 @@
     <!-- Google Font -->
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap");
-
       body {
         font-family: "Nunito", sans-serif;
-        overscroll-behavior: none;
-      }
-
-      .no-select {
-        user-select: none;
-        -webkit-user-select: none;
-        -webkit-touch-callout: none;
       }
     </style>
 
-    <!-- Import Map -->
+    <!-- React Import Map -->
     <script type="importmap">
       {
         "imports": {
@@ -45,10 +37,9 @@
   </head>
 
   <body class="bg-gray-900 text-white h-screen w-screen overflow-hidden">
-    <!-- React Root -->
-    <div id="root" class="h-full w-full"></div>
+    <div id="root"></div>
 
-    <!-- React App -->
+    <!-- Active React Script -->
     <script type="module">
       import React from "react";
       import { createRoot } from "react-dom/client";
@@ -56,26 +47,17 @@
       function App() {
         return React.createElement(
           "div",
-          {
-            className:
-              "h-full w-full flex flex-col items-center justify-center text-center px-4"
-          },
+          { className: "h-full flex flex-col items-center justify-center" },
           [
             React.createElement(
               "h1",
-              {
-                key: "title",
-                className: "text-4xl font-extrabold mb-4 text-green-400"
-              },
+              { key: "title", className: "text-4xl font-bold text-green-400 mb-4" },
               "EARN 1"
             ),
             React.createElement(
               "p",
-              {
-                key: "subtitle",
-                className: "text-lg text-gray-300 mb-6"
-              },
-              "Word Puzzle Game"
+              { key: "desc", className: "text-lg text-gray-300 mb-6" },
+              "Your puzzle game is loading..."
             ),
             React.createElement(
               "button",
